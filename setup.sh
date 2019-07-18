@@ -51,13 +51,12 @@ HOMEBREW_DEBS=${HOMEBREW_DEBS-python3 libxml2 libxslt libffi cmake libtool glib 
 ARCHDEBS=${ARCHDEBS-python-virtualenvwrapper python-pip libxml2 libxslt git libffi cmake readline libtool debootstrap glib2 pixman qt5-base binutils binutils nasm lib32-glibc lib32-gcc-libs lib32-zlib lib32-ncurses}
 ARCHCOMDEBS=${ARCHCOMDEBS}
 RPMS=${RPMS-gcc gcc-c++ make python3-virtualenvwrapper python3-pip python3-devel python3-setuptools libxml2-devel libxslt-devel git libffi-devel cmake readline-devel libtool debootstrap debian-keyring glib2-devel pixman-devel qt5-qtdeclarative-devel binutils-x86_64-linux-gnu nasm openssl-devel python2 glibc.i686 libgcc.i686 libstdc++.i686 ncurses-compat-libs.i686 zlib.i686 java-1.8.0-openjdk-devel}
-REPOS=${REPOS-cooldict mulpyplexer monkeyhex archinfo vex pyvex cle claripy angr angr-management angrop angr-doc binaries ailment pysoot}
+REPOS=${REPOS-vex angr angr-management angrop angr-doc binaries}
 declare -A EXTRA_DEPS
 EXTRA_DEPS["angr"]="unicorn"
-EXTRA_DEPS["pyvex"]="--pre capstone"
 
 ORIGIN_REMOTE=${ORIGIN_REMOTE-$(git remote -v | grep origin | head -n1 | awk '{print $2}' | sed -e "s|[^/:]*/angr-dev.*||")}
-REMOTES=${REMOTES-${ORIGIN_REMOTE}angr ${ORIGIN_REMOTE}shellphish ${ORIGIN_REMOTE}mechaphish https://git:@github.com/zardus https://git:@github.com/rhelmot https://git:@github.com/salls https://git:@github.com/lukas-dresel}
+REMOTES=${REMOTES-${ORIGIN_REMOTE}angr ${ORIGIN_REMOTE}shellphish ${ORIGIN_REMOTE}mechaphish https://git:@github.com/zardus https://git:@github.com/rhelmot https://git:@github.com/salls}
 
 
 INSTALL_REQS=0
